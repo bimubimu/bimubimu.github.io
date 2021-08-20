@@ -172,7 +172,7 @@
               <span class="post-meta-item-text">发表于</span>
               
 
-              <time title="创建时间：2021-08-20 14:39:58 / 修改时间：14:52:07" itemprop="dateCreated datePublished" datetime="2021-08-20T14:39:58+08:00">2021-08-20</time>
+              <time title="创建时间：2021-08-20 14:39:58 / 修改时间：15:45:01" itemprop="dateCreated datePublished" datetime="2021-08-20T14:39:58+08:00">2021-08-20</time>
             </span>
 
           
@@ -186,7 +186,17 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <p>#1.将项目的运行平台设置为x64<br><img src="D:\Blog\source_posts\图片" alt="avatar"><br>#2.在“项目–&gt;属性-&gt;C/C++–&gt;常规–&gt;附加包含目录”中添加MySql Server的include目录<br>#3.在“项目–&gt;属性-&gt;链接器–&gt;常规-&gt;附加库目录”中添加MySql Server的lib目录<br>#4、在“项目–&gt;属性-&gt;链接器–&gt;输入-&gt;附加依赖项“中添加libmysql.lib<br>#5、将MySql Server的lib目录下的libmysql.dll复制到项目工程源文件的所在位置<br>#6、测试代码段：</p>
+          <h1 id="1-将项目的运行平台设置为x64"><a href="#1-将项目的运行平台设置为x64" class="headerlink" title="1.将项目的运行平台设置为x64"></a>1.将项目的运行平台设置为x64</h1><p><img src="https://i.loli.net/2021/08/20/jI9DaPtYAdu264l.png" alt="屏幕截图 2021-08-20 144353.png"></p>
+<h1 id="2-在“项目–-gt-属性-gt-C-C-–-gt-常规–-gt-附加包含目录”中添加MySql-Server的include目录"><a href="#2-在“项目–-gt-属性-gt-C-C-–-gt-常规–-gt-附加包含目录”中添加MySql-Server的include目录" class="headerlink" title="2.在“项目–&gt;属性-&gt;C/C++–&gt;常规–&gt;附加包含目录”中添加MySql Server的include目录"></a>2.在“项目–&gt;属性-&gt;C/C++–&gt;常规–&gt;附加包含目录”中添加MySql Server的include目录</h1><p><img src="https://i.loli.net/2021/08/20/TnKpvBexHjAblUF.png" alt="屏幕截图 2021-08-20 153005.png"></p>
+<h1 id="3-在“项目–-gt-属性-gt-链接器–-gt-常规-gt-附加库目录”中添加MySql-Server的lib目录"><a href="#3-在“项目–-gt-属性-gt-链接器–-gt-常规-gt-附加库目录”中添加MySql-Server的lib目录" class="headerlink" title="3.在“项目–&gt;属性-&gt;链接器–&gt;常规-&gt;附加库目录”中添加MySql Server的lib目录"></a>3.在“项目–&gt;属性-&gt;链接器–&gt;常规-&gt;附加库目录”中添加MySql Server的lib目录</h1><p><img src="https://i.loli.net/2021/08/20/TnKpvBexHjAblUF.png" alt="屏幕截图 2021-08-20 153005.png"></p>
+<h1 id="4-在“项目–-gt-属性-gt-链接器–-gt-输入-gt-附加依赖项“中添加libmysql-lib"><a href="#4-在“项目–-gt-属性-gt-链接器–-gt-输入-gt-附加依赖项“中添加libmysql-lib" class="headerlink" title="4.在“项目–&gt;属性-&gt;链接器–&gt;输入-&gt;附加依赖项“中添加libmysql.lib"></a>4.在“项目–&gt;属性-&gt;链接器–&gt;输入-&gt;附加依赖项“中添加libmysql.lib</h1><p><img src="https://i.loli.net/2021/08/20/TnKpvBexHjAblUF.png" alt="屏幕截图 2021-08-20 153005.png"></p>
+<h1 id="5-将MySql-Server的lib目录下的libmysql-dll复制到项目工程源文件的所在位置"><a href="#5-将MySql-Server的lib目录下的libmysql-dll复制到项目工程源文件的所在位置" class="headerlink" title="5.将MySql Server的lib目录下的libmysql.dll复制到项目工程源文件的所在位置"></a>5.将MySql Server的lib目录下的libmysql.dll复制到项目工程源文件的所在位置</h1><p><img src="https://i.loli.net/2021/08/20/TnKpvBexHjAblUF.png" alt="屏幕截图 2021-08-20 153005.png"></p>
+<h1 id="6-测试代码段："><a href="#6-测试代码段：" class="headerlink" title="6.测试代码段："></a>6.测试代码段：</h1><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line">#include &lt;winsock.h&gt; //注意顺序，要放在mysql.h前</span><br><span class="line">#include &lt;mysql.h&gt; //控制台项目中要在mysql.h之前include&lt;winsock.h&gt;</span><br><span class="line">#include &lt;iostream&gt;</span><br><span class="line">using namespace std;</span><br><span class="line"></span><br><span class="line">int main() &#123;</span><br><span class="line">    mysql_library_init(NULL, 0, 0);</span><br><span class="line">    MYSQL mysql;</span><br><span class="line">    mysql_init(&amp;mysql);</span><br><span class="line">    if (0 == mysql_options(&amp;mysql, MYSQL_SET_CHARSET_NAME, &quot;gbk&quot;))//设置字符集</span><br><span class="line">    &#123;</span><br><span class="line">        cout &lt;&lt; &quot;设置字符集成功\n\n&quot; &lt;&lt; endl;</span><br><span class="line">    &#125;</span><br><span class="line">    const char* host = &quot;127.0.0.1&quot;;</span><br><span class="line">    const char* user = &quot;root&quot;;</span><br><span class="line">    const char* password = &quot;123456&quot;;</span><br><span class="line">    const char* database = &quot;校园招聘管理系统&quot;; //数据库名称（已存在）</span><br><span class="line">    if (!mysql_real_connect(&amp;mysql, host, user, password, database, 3306, 0, 0)) &#123;</span><br><span class="line">        cout &lt;&lt; &quot;Failed!&quot; &lt;&lt; mysql_error(&amp;mysql) &lt;&lt;endl;</span><br><span class="line">    &#125;</span><br><span class="line">    else &#123;</span><br><span class="line">        cout &lt;&lt; &quot;Success!&quot; &lt;&lt; endl;</span><br><span class="line">    &#125;</span><br><span class="line">    system(&quot;pause&quot;);</span><br><span class="line"></span><br><span class="line">    return 0;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+
+
 
       
     </div>
